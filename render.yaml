@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: hanashi
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npx serve -s build -l $PORT
+    envVars:
+      - key: NODE_VERSION
+        value: 18
